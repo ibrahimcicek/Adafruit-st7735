@@ -34,17 +34,19 @@ Pin diyagrami asagidaki gibi olmalidir.
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
 void setup(void) {
-  tft.initR(INITR_144GREENTAB); // Init ST7735R chip, green tab
-  //tft.fillScreen(ST77XX_BLACK);
-  tft.setRotation(0); // set display orientation 
+ // tft.initR(INITR_BLACKTAB); // Init ST7735R chip, green tab
+  tft.initR(INITR_144GREENTAB);
+  tft.fillScreen(ST77XX_BLACK);
+  tft.setRotation(45); // set display orientation 
 }
 
 void loop() {
-tft.fillScreen (ST7735_BLACK);  // Ekranın tamamını siyaha boya
-tft.setTextColor(ST7735_RED);  // Yazı rengini kırmızı olarak ayarla
-tft.setTextSize(1);  // Yazı boyutu 1 olsun
-tft.setCursor (10, 6);  // Yazının başlangıç pikselinin koordinatları
-tft.print ("yazi yazdim yaz geldi");  // Ekrana yazdırılacak metin
+//tft.fillScreen (ST7735_BLACK);  // Ekranın tamamını siyaha boya
+//tft.setTextColor(ST7735_RED);  // Yazı rengini kırmızı olarak ayarla
+//tft.setTextSize(1);  // Yazı boyutu 1 olsun
+//tft.setCursor (10, 6);  // Yazının başlangıç pikselinin koordinatları
+//tft.print ("yazi yazdim yaz gel");  // Ekrana yazdırılacak metin
+print_text(1,1,"blah ",2,ST7735_RED);
 delay(10000);
 
   /*
