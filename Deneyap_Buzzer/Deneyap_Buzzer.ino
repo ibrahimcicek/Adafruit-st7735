@@ -1,13 +1,15 @@
 //int buzzerPin = 8;
 
 //Türkiye Cumhuriyeti İstiklal Marşı   
-const int buzzer = 8; // buzzer pin7 ve GND'ye bağlı
+const int buzzer = 8; // buzzer pin8 ve GND'ye bağlı
+const int control_buzzer = 9;
 //kullanılacak notalar
 int a, ad, b, c, cd, d, dd, e, f, fd, g, gd, a2, ad2, b2, c2, cd2, d2, dd2, e2, f2, fd2, g2, gd2, a3;
 void setup()   
 {  
 Serial.begin(9600); 
 pinMode(buzzer, OUTPUT);
+pinMode(control_buzzer, OUTPUT);
 //////////////////////  
 // c  = do
 // cd = do diyez
@@ -50,7 +52,29 @@ gd2 = 1660;
 a3 = 1760;
 }  
 void loop() 
-{  
+{
+  
+  
+  //digitalWrite(control_buzzer,HIGH);
+  //digitalWrite(buzzer,HIGH);
+  tone(buzzer, -1);
+  delay(500);
+  //digitalWrite(buzzer,LOW);
+  tone(buzzer, 100);
+  delay(500);
+  tone(buzzer, 100);
+  delay(500);
+  tone(buzzer, 200);
+  delay(500);
+  tone(buzzer, 400);
+  delay(500);
+  tone(buzzer, 800);
+  delay(500);
+  tone(buzzer, 1600);
+  delay(500);
+ 
+}
+/*
 //Korkma Sönmez Bu Şafak  
 tone(buzzer, c);
 delay(800);
@@ -313,6 +337,7 @@ delay(1600);
 noTone(buzzer);
 delay(300);
 }
+*/
 /*
 void setup()
 {
