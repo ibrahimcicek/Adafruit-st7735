@@ -55,11 +55,9 @@ void loop()
 {
   
   
-  //digitalWrite(control_buzzer,HIGH);
-  //digitalWrite(buzzer,HIGH);
+ 
   tone(buzzer, -1);
   delay(500);
-  //digitalWrite(buzzer,LOW);
   tone(buzzer, 100);
   delay(500);
   tone(buzzer, 100);
