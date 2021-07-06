@@ -46,7 +46,7 @@ void loop() {
 //tft.setTextSize(1);  // Yazı boyutu 1 olsun
 //tft.setCursor (10, 6);  // Yazının başlangıç pikselinin koordinatları
 //tft.print ("yazi yazdim yaz gel");  // Ekrana yazdırılacak metin
-print_text(1,1,"blah ",2,ST7735_RED);
+print_text(1,1,"blah ",2,ST7735_BLUE);
 delay(10000);
 
   /*
